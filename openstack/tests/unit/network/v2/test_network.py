@@ -27,6 +27,7 @@ EXAMPLE: dict[str, Any] = {
     'id': IDENTIFIER,
     'ipv4_address_scope': '6',
     'ipv6_address_scope': '7',
+    'internal_dns_enabled': False,
     'is_default': False,
     'mtu': 8,
     'name': '9',
@@ -78,6 +79,7 @@ class TestNetwork(base.TestCase):
         self.assertEqual(
             EXAMPLE['ipv6_address_scope'], sot.ipv6_address_scope_id
         )
+        self.assertFalse(sot.is_internal_dns_enabled)
         self.assertFalse(sot.is_default)
         self.assertEqual(EXAMPLE['mtu'], sot.mtu)
         self.assertEqual(EXAMPLE['name'], sot.name)

@@ -1,0 +1,6 @@
+---
+features:
+  - |
+    Added the ``is_internal_dns_enabled`` attribute to the network resource.
+    It is available with the ``network-internal-dns`` extension of the
+    Networking service.
