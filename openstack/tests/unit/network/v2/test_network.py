@@ -28,6 +28,7 @@ EXAMPLE: dict[str, Any] = {
     'ipv4_address_scope': '6',
     'ipv6_address_scope': '7',
     'internal_dns_enabled': False,
+    'metadata_stateful_ipv6_address': True,
     'is_default': False,
     'mtu': 8,
     'name': '9',
@@ -80,6 +81,7 @@ class TestNetwork(base.TestCase):
             EXAMPLE['ipv6_address_scope'], sot.ipv6_address_scope_id
         )
         self.assertFalse(sot.is_internal_dns_enabled)
+        self.assertTrue(sot.is_metadata_stateful_ipv6_address)
         self.assertFalse(sot.is_default)
         self.assertEqual(EXAMPLE['mtu'], sot.mtu)
         self.assertEqual(EXAMPLE['name'], sot.name)

@@ -1,0 +1,6 @@
+---
+features:
+  - |
+    Added the ``is_metadata_stateful_ipv6_address`` attribute to the network
+    resource. It is available with the ``network-metadata-stateful-ipv6``
+    extension of the Networking service.
